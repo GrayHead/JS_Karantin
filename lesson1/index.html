@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <!--        <h1>hello</h1>-->
+        <!--        <h2>hello</h2>-->
+        <!--        <h3>hello</h3>-->
+        <!--        <h6>hello</h6>-->
+        <!--        ctrl +  / -->
+        <!--        diamond key <>-->
+        <!--        <div style="background: silver; width:200px; height: 200px;">ajhdgasjdgj</div>-->
+
+
+        <script src="scripts/main.js"></script>
+        <script>
+			"use strict";
+			// alert('asdas');
+			// console.log('++++++++++');
+			// document.write('<h1>!!!!!!!!!!!!!</h1>');
+			// document.write('<h2>!!!!!!!!!!!!!</h2>');
+
+			let c = 100;
+			c = 200; // number
+			console.log(typeof c);
+			c = "hello";
+			console.log(typeof c);
+			let b = true;  // > <  >= <= == != === !==
+			console.log(typeof b);
+			console.log(typeof (5 < 4));
+			let x = 100, y = 200, z = '20';
+			let result = x + y;
+			console.log(result);// 300
+			console.log(typeof (x + z));
+			console.log((x + y) + z);
+			console.log(z + x + y);// !100200
+			console.log(x - z);
+			let car = {
+				poducer: 'subaru',
+				model: 'legacay',
+				volume: 3
+			};
+
+			console.log(car.poducer);
+			console.log(car.model);
+			console.log(car['volume']);
+			console.log(typeof car);
+
+			//             0    1    2    3      4    5   6     7
+			let wallet = [500, 500, 500, 1000, 1000, 50, 100, 20, true, 'asdfashd', {producer: 'asdghsad'}];  // length = 8 lastIndex = length-1
+			console.log(wallet[6]);
+			console.log(wallet[1]);
+			console.log(wallet.length);
+			console.log(typeof wallet[100]); // undefined
+			let q = null;
+			console.log(typeof q);
+			console.log(typeof ('asd' / 10));
+
+			console.log(100 + '');
+			let number = +'-999asd';
+			console.log(number);
+			let s = '123.999asd';
+			let resultOfParseInt = parseInt(s);
+			console.log(resultOfParseInt);
+			let k = '123.999asd';
+			let float = parseFloat(k);
+			// ctrl alt v
+			console.log(float);
+			console.log(!!'');
+			console.log(!!0);
+			console.log(false);
+			console.log(!!null);
+			console.log(!!undefined);
+			console.log(!!NaN);
+			console.log(!!'asidhfadsgfahsgdfhagsfd    13123');
+			console.log(!![]);
+			console.log(!!{});
+
+			//	 + - * / %
+			console.log(11 % 3);//2
+			console.log(10 + 2 / 3);
+
+			console.log(5 === '5');
+
+			//
+			// let color = prompt('color?');
+			// if (color === 'green' ) {
+			// 	console.log('go!');
+			// } else if (color === 'yellow') {
+			// 	console.log('wait');
+			// } else if (color === 'red') {
+			// 	console.log('stop');
+			// } else {
+			// 	console.log('aisdhsagfdhsahda');
+			// }
+
+
+			// let answer = confirm('????');
+			// console.log(answer);
+			// let color = prompt('color?');
+			// if (color === 'green' && answer) {
+			// 	console.log('go!');
+			// } else if (color === 'yellow') {
+			// 	console.log('wait');
+			// } else if (color === 'red') {
+			// 	console.log('stop');
+			// } else {
+			// 	console.log('aisdhsagfdhsahda');
+			// }
+
+
+			let key = prompt('season?');
+			switch (key) {
+
+				case 'winter':
+					console.log('it s cold');
+					// break;
+
+				case 'summer':
+					console.log('it s hot');
+					// break;
+
+				default :
+					console.log('????');
+
+
+			}
+
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+
+
+			// // let str = '10';
+			// // cast
+			// document.write('10' * '2' + '<br>');
+			// document.write('10ads' / '2qew' + '<br>');
+
+			// let a = 10;
+			// let b = 20;
+			// let c = 30;
+			//
+			//
+			// if (a > b && a > c) {
+			// 	if (b > c) {
+			// 		console.log(a, b, c);
+			// 	} else {
+			// 		console.log(a, c, b);
+			// 	}
+			//
+			// } else if () {
+			// }
+
+        </script>
+
+
+        <script>
+			// let x = 0;
+			// // x++;
+			// // x = x + 100;
+			// // x += 100;
+			// console.log(++x); // 1
+			// console.log(x); // 1
+
+			// for (let i = 0; i < 10; i++) {
+			// 	console.log('loop - #' + i);
+			// }
+			// let wallet = [500, 1000, 100, 1, 2, 5, 10, 20];
+			// console.log('length', wallet.length);
+			// for (let i = 0; i < wallet.length; i++) {
+			// 	console.log(wallet[i]);
+			// }
+
+			// for (let i = 0; i < wallet.length; i++) {
+			// 	const walletElement = wallet[i];
+			// }
+
+
+			// let wallet = [500, 500, 1000, 1000, 100];
+
+			// for (const number of wallet) {
+			//
+			// 	if (number % 2 !== 0) {
+			// 		console.log(number);
+			// 	}
+			// }
+
+			// fetch('https://jsonplaceholder.typicode.com/posts')
+			// 	.then(posts => posts.json())
+			// 	.then(posts => {
+			// 		for (const post of posts) {
+			// 			console.log(post);
+			// 			document.write('<div>' + post.id + ' ' + post.title + '</div>');
+			// 		}
+			//
+			// 	});
+
+
+			// for (let i = 0; i < wallet.length; i++) {
+			//
+			// 	// if (wallet[i] % 2 !== 0) {
+			// 	// 	console.log(wallet[i]);
+			// 	// }
+			//
+			// 	if (i % 2 === 0 && i !== 0) {
+			// 		console.log(wallet[i]);
+			// 	}
+			//
+			// }
+
+
+			// for (const nominal of wallet) {
+			// 	// console.log('банкнота з номіналом - ' + nominal + ' skgsjgfdhs');
+			// 	console.log(`банкнота з номіналом - ${nominal} sda yatf `);
+			// }
+
+			// let i = 0;
+			// while (i < wallet.length) {
+			// 	console.log(wallet[i]);
+			// 	i++;
+			// }
+
+
+			// do {
+			// 	console.log('asihgsahgd');
+			// } while (false);
+
+
+			// let i = 0;
+			// while (confirm('do iteration?')) {
+			// 	console.log(wallet[i]);
+			// 	i++;
+			// }
+			//
+			//
+
+			let users = [
+				{langs: ['ua', 'en', 'ru'], name: 'vasya', age: 31, status: false},
+				{langs: ['ua', 'fr', 'ru'], name: 'petya', age: 30, status: true},
+				{langs: ['ua', 'en', 'ru'], name: 'kolya', age: 29, status: true},
+				{langs: ['ua', 'dn', 'ru'], name: 'olya', age: 28, status: false},
+				{langs: ['ua', 'jp', 'ru'], name: 'max', age: 30, status: true},
+				{langs: ['ua', 'ch', 'ru'], name: 'anya', age: 31, status: false},
+				{langs: ['ua', 'hi', 'ru'], name: 'oleg', age: 28, status: false},
+				{langs: ['ua', 'hu', 'ru'], name: 'andrey', age: 29, status: true},
+				{langs: ['ua', 'jp', 'ru'], name: 'masha', age: 30, status: true},
+				{langs: ['ua', 'en', 'ru'], name: 'olya', age: 31, status: false},
+				{langs: ['ua', 'fr', 'ru'], name: 'max', age: 31, status: true}
+			];
+
+			// for (const user of users) {
+			// 	if (user.status && user.age >= 28 && user.age <= 30) {
+			// 		console.log(user);
+			// 	}
+			// }
+			//
+
+
+			// for (const user of users) {
+			// 	let arrayOfLangs = user.langs;
+			// 	console.log(user);
+			// 	for (const language of arrayOfLangs) {
+			// 		console.log(language);
+			// 	}
+			// }
+
+
+			let arr = [];
+			console.log(arr); // []
+			arr.push('asd');
+			console.log(arr); // ['asd']
+			arr.push('qwe');
+			console.log(arr); // ['asd','qwe']
+			arr.push('okos');
+			arr.push('fokos');
+			arr.push('loko');
+			console.log(arr);
+			let popedElement = arr.pop();
+			console.log(popedElement);
+			console.log(arr);
+			let shiftedElement = arr.shift();
+			console.log(shiftedElement);
+			console.log(arr);
+			let newLength = arr.unshift('agfdhagsfdhsagfhdgsaf');
+			console.log(newLength);
+			console.log(arr);
+
+
+			// for (let i = 0; i < users.length; i++) {
+			// 	const user = users[i];
+			// 	let langs = user.langs;
+			// 	for (let j = 0; j < langs.length; j++) {
+			// 		const lang = langs[j];
+			// 		console.log(lang);
+			// 	}
+			// }
+
+			for (let i = 0; i < users.length; i++) {
+				for (let k = 0; k < users[i].langs.length; k++) {
+					 users[i].langs[k];
+				}
+			}
+
+			let xxx  = {a : 'adasd', b: 'aqeqwe',c:'131231'}
+			for (const field in xxx) {
+				console.log(field, xxx[field]);
+			}
+
+
+        </script>
+    </body>
+</html>
