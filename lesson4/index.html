@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+
+        <script>
+
+
+			// let matrix = [
+			// 	1,
+			// 	'2',
+			// 	'3',
+			// 	[2, 3, 4]
+			// ];
+			//
+			// console.log(typeof []); // object
+			// console.log(typeof {name: 'asdgfahg'}); // object
+			//
+			// for (const elment of matrix) {
+			// 	console.log(elment);
+			// 	let resultBool = Array.isArray(elment);
+			// 	if (resultBool) {
+			// 		for (const elmentElement of elment) {
+			// 			console.log(elmentElement);
+			// 		}
+			// 	}
+			// }
+			//
+			// // - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
+			// // let users = [{ name: 'vasya', age: 31, status: false, skills: ['java', 'js'] }, { name: 'petya', age: 30, status: true, skills: ['java', 'js', 'html'] }, { name: 'kolya', age: 29, status: true, skills: ['mysql', ',mongo'] }, { name: 'olya', age: 28, status: false, skills: ['java', 'js'] }, { name: 'max', age: 30, status: true, skills: ['mysql', ',mongo'] }];
+			// console.info(`Task 16`);
+			// let users16a = [
+			// 	{name: 'vasya', age: 31, status: false, skills: ['java', 'js']},
+			// 	{name: 'petya', age: 30, status: true, skills: ['java', 'js', 'html']},
+			// 	{name: 'kolya', age: 29, status: true, skills: ['mysql', 'mongo']},
+			// 	{name: 'olya', age: 28, status: false, skills: ['java', 'js']},
+			// 	{name: 'max', age: 30, status: true, skills: ['mysql', 'mongo']}
+			// ];
+			//
+			// for (const user of users16a) {
+			// 	for (const userKey in user) {
+			// 		if (Array.isArray(user[userKey])) {
+			// 			for (const arrElement of user[userKey]) {
+			// 				console.log(arrElement);
+			// 			}
+			// 		}
+			// 	}
+			// }
+
+			// let elementsByClassName = document.getElementsByClassName('fc_rules');
+			// let elementNodeListOf = document.querySelectorAll('.fc_rules');
+			// console.log(elementsByClassName);
+			// console.log(elementNodeListOf);
+
+
+			// alert();
+			// prompt();
+			let owu = 'oktenweb university site owu.com.ua';
+			let owuElement = owu[10];
+			console.log(owuElement);
+			let indexOf = owu.indexOf('i');
+			console.log(indexOf);
+			let lastIndexOf = owu.lastIndexOf('i');
+			console.log(lastIndexOf);
+			console.log(owu.charAt(11)); // i
+			console.log(owu[11]);
+			console.log(owu[8]); // " "
+			console.log(owu.charCodeAt(8)); // 32
+			// let replacedString = owu.replace('o', '!!!');
+			let replacedString = owu.replace(/o/g, '!!!');
+			console.log(replacedString);
+			let slice = owu.slice(2, 5);
+			console.log(slice);
+			let split = owu.split(" ");
+			console.log(split);
+
+			let upperCase = owu.toUpperCase();
+			console.log(upperCase);
+
+
+			// oktenweb
+			// oktenWEB
+			// OKTENWEB
+
+			let startsWith = owu.startsWith('okt'); // true
+			let endsWith = owu.endsWith('.ua'); // true
+			let result = owu.includes('ten'); // true
+
+
+			let resultOfCalc = calculate(10, 20);
+
+			function calculate(a, b) {
+				var xxx = a + b;
+				console.log(xxx);
+				return xxx;
+			}
+
+			// console.log(xxx); error
+
+
+			function calculate(a, b) {
+				console.log(a + b);
+				return a + b;
+			}
+
+			console.log(resultOfCalc);
+
+			let x = 100;
+			let y = 200;
+			calculate(x, y);
+
+			// function expression
+
+			// console.log(calculator(10, 20)); // error
+
+			let calculator1 = function (a, b) {
+				return a + b;
+			};
+			let cac1Arrow1 = (a, b) => a + b;
+			let cac1Arrow2 = (a, b) => {return a + b;};
+			let cac1Arrow3 = (a, b) => {
+				console.log(a + b);
+				return a + b;
+			};
+
+
+			let calculator2 = function (a, b) {
+				console.log(a + b);
+			};
+
+			let calc2Arrow1 = (a, b) => console.log(a + b);
+			let calc2Arrow2 = (a, b) => { console.log(a + b);};
+
+			let arrow = a => a + 10;
+
+
+			cac1Arrow1(10, 20);
+
+
+			// function calcArg(...x) {
+			// 	console.log(x);
+			//
+			//
+			//
+			// }
+
+			function calcArg() {
+
+				function minus(a, b) {
+					return a - b;
+				}
+
+				if (arguments.length === 2) {
+					return minus(arguments[0], arguments[1]);
+				}
+				if (arguments.length === 3) {
+					return arguments[0] + arguments[1] + arguments[2];
+				}
+
+			}
+
+			calcArg(10, 20, 40);
+
+
+			let value = 0;
+
+			function incrementP(i) {
+				i++;
+			}
+
+			incrementP(value);
+
+			console.log(value); // 0
+
+
+			let obj = {
+				value: 0
+			};
+
+			function incrementRef(x) {
+				x.value++;
+			}
+
+
+			incrementRef(obj);
+
+
+			console.log(obj);
+
+			let arr = [];
+
+			function fillarray() {
+				arr = [1, 2, 3];
+			}
+
+
+			fillarray();
+			console.log(arr);
+
+
+			// function b() {
+			//
+			// }
+			// function a() {
+			// 	b();
+			//
+			// }
+
+
+			let user = {
+				name: 'vaya',
+				age: 13,
+				wife: {
+					name: 'olya',
+					age: 14,
+					mother: {
+						status: true,
+						name: 'anya',
+						car: {
+							model: 'subaru'
+						}
+					}
+				}
+			};
+
+			//
+			// function exploreUser(user) {
+			// 	for (const field in user) {
+			// 		if (typeof user[field] != 'object') {
+			// 			console.log(field, user[field]);
+			// 		} else {
+			// 			exploreUser(user[field]);
+			// 		}
+			// 	}
+			// }
+			//
+			// exploreUser(user);
+
+			function rec(a) {
+				a++;
+				if (a > 10) {
+					return;
+				}
+				rec(a);
+			}
+
+			rec(0);
+
+
+        </script>
+
+    </body>
+</html>
