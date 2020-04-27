@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+
+
+        <script>
+
+			// let xxx = {
+			// 	name: 'vasya',
+			// 	age: 31,
+			// 	greeting: function () {
+			// 		console.log(`hello my name is ${this.name}`);
+			// 		console.log(this);
+			// 	}
+			//
+			// };
+			//
+			// xxx.greeting();
+			//
+			// let yyy = {
+			// 	name: 'vasya',
+			// 	age: 31,
+			// 	greeting: function () {
+			// 		console.log(`hello my name is ${this.name}`);
+			// 		console.log(this);
+			// 	},
+			// 	wife: {
+			// 		name: 'olya',
+			// 		greet: function () {
+			// 			console.log(this);
+			// 		}
+			// 	}
+			// };
+			//
+			// yyy.greeting();
+			//
+			// yyy.wife.greet();
+
+
+			// function User(name, age) {
+			// 	this.name = name;
+			// 	this.age = age;
+			// }
+			//
+			// let user = new User('vasya', 31);
+			// let user2 = new User('petya', 32);
+			// console.log(user);
+			// console.log(user2);
+			// user = new User("sasha", 123);
+			// console.log(user);
+
+			//
+			// function UserWithWife(name, age, wife) {
+			// 	this.name = name;
+			// 	this.age = age;
+			// 	this.wife = wife;
+			// }
+			//
+			// let wife = {name: 'olaya', age: 29};
+			// let userWithWife = new UserWithWife('vasya', 31, wife);
+
+			// function UserWithWife(name, age, wifeName, wifeAge) {
+			// 	this.name = name;
+			// 	this.age = age;
+			// 	this.wife = {
+			// 		name: wifeName,
+			// 		age: wifeAge
+			// 	};
+			// 	this.greeting = function (msg) {
+			// 		console.log(this.wife.name);
+			// 	};
+			// }
+			//
+			// let userWithWife = new UserWithWife('vasya', 31, 'olya', 29);
+			// userWithWife.greeting('ashdfhagsfd');
+
+
+			// class User {
+			// 	constructor(name, age) {
+			// 		this.name = name;
+			// 		this.age = age;
+			// 		// this.greeting = function () {
+			// 		// 	console.log('hello');
+			// 		// };
+			// 	}
+			//
+			// 	greeting() {
+			// 		console.log('hello man!');
+			// 	}
+			//	
+			//	
+			// }
+			//
+			// // let user = new User('vasya', 31);
+			// // console.log(user);
+			// // user.greeting();
+			//
+			//
+			// class Customer extends User {
+			// 	constructor(name, age, status) {
+			// 		super(name, age);
+			// 		this.status = status;
+			// 	}
+			//
+			// 	customerGreeting() {
+			// 		super.greeting();
+			// 	}
+			//	
+			//	
+			// }
+			//
+			// let customer = new Customer('kokos', 123);
+			// customer.greeting();
+			//
+			// console.log(customer);
+			//
+			//
+			// let car = new Car('asd', 'qwe', 123);
+			// console.log();
+
+
+			// class User {
+			//
+			// 	constructor(name) {
+			// 		this._name = name;
+			// 	}
+			//
+			//
+			// 	get name() {
+			// 		return this._name;
+			// 	}
+			//
+			// 	set name(value) {
+			// 		this._name = value;
+			// 	}
+			// }
+			//
+			// let user = new User('ahsfgasf');
+			// console.log(user.name);
+			// user.name = 'ashdfhsagfd';
+			// console.log(user);
+
+
+			function userGenerator(name) {
+				let user = {name};
+				let accessor = {
+					getName: function () {
+						return user.name;
+					},
+					setName: function (name) {
+						user.name = name;
+					}
+				};
+				return accessor;
+
+			}
+
+			let user = userGenerator('vasya');
+			console.log(user.getName());
+			// user.name = '12313123';
+			user.setName('123123123');
+			console.log(user);
+			console.log(user.getName());
+
+
+			let asd = [1,0,4,45,60,0]
+			let x = class {
+			};
+
+
+        </script>
+    </body>
+</html>
