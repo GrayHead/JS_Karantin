@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .target {
+                width: 200px;
+                height: 200px;
+                background: silver;
+            }
+
+        </style>
+    </head>
+    <body>
+
+
+        <h1>hello</h1>
+        <div class="target"></div>
+
+        <form name="xxx1" action="/form1Action">
+            <div><input type="text" value="xxx" name="imya" placeholder="name"></div> <!--imya=asdasdsad-->
+            <div><input type="radio" name="status"></div>
+            <div><input type="checkbox" name="state"></div>
+            <button>send</button>
+
+        </form>
+        <form name="form2">
+            <div><input name="imya" type="" value="" placeholder="name"></div>
+            <div><input type="radio" value="" placeholder=""></div>
+            <div><input type="checkbox" value="" placeholder=""></div>
+
+        </form>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor dolore dolores doloribus eveniet expedita
+            impedit ipsum libero magni, maxime molestiae omnis porro qui, quia quisquam ratione repudiandae sequi vel
+            voluptates.</p>
+
+        <ul>
+            <li>1 data</li>
+            <li>2 data</li>
+            <li>3 data</li>
+            <li>4 data</li>
+            <li>5 data</li>
+        </ul>
+
+
+        <script>
+
+			let target = document.getElementsByClassName('target')[0];
+
+			// target.onclick = function (e) {
+			// 	console.log('click');
+			// 	console.log(e);
+			// };
+
+
+			// document.body.onmousemove = function (e) {
+			// 	console.log(e.target);
+			// 	e.target.style.background = 'gray';
+			// 	e.target.onmouseleave = function () {
+			// 		console.log('leave');
+			// 		this.style.removeProperty('background');
+			// 	};
+			// };
+
+			// target.onclick = function () {
+			// 	console.log('click2');
+			// 	target.onmousemove = function (eo) {
+			// 		console.log(eo);
+			// 		// this.style.height = eo.pageY + 200 + 'px';
+			// 		// this.style.width = eo.pageX + 200 + 'px';
+			// 		let red = `${eo.pageX}`;
+			// 		let green = `${eo.pageY}`;
+			// 		let blue = `${eo.pageY}`;
+			// 		this.style.backgroundColor = `rgb(${red},${green},${blue})`;
+			//
+			// 	};
+			// };
+
+			// target.onclick = function () {
+			// 	console.log('click2');
+			// };
+
+			target.addEventListener('click', function (e) {
+				console.log('click1');
+			});
+
+			target.addEventListener('click', function (e) {
+				console.log('click2', this);
+			});
+			target.addEventListener('click', (e) => {
+				console.log('click3', target);
+			});
+
+
+			// let inputsName = document.getElementsByName('imya');
+			// console.log(inputsName);
+			// for (const input of inputsName) {
+			// 	input.oninput = function (e) {
+			// 		console.log(this.value);
+			// 		this.style.backgroundColor = this.value;
+			// 	};
+			// }
+
+			// forms api
+
+			console.log(document.forms.xxx1);
+			console.log(document.xxx1);
+			console.log(document.xxx1.imya);
+
+			console.log(document.form2.imya);
+
+
+			document.body.onkeypress = function (e) {
+				console.log('press', e.key, e.shiftKey);
+			};
+
+
+			let users = [
+				{name: 'vasya', age: 31, status: false},
+				{name: 'petya', age: 30, status: true},
+				{name: 'kolya', age: 29, status: true},
+				{name: 'olya', age: 28, status: false},
+				{name: 'max', age: 30, status: true},
+				{name: 'anya', age: 31, status: false},
+				{name: 'oleg', age: 28, status: false},
+				{name: 'andrey', age: 29, status: true},
+				{name: 'masha', age: 30, status: true},
+				{name: 'olya', age: 31, status: false},
+				{name: 'max', age: 31, status: true}
+			];
+
+			let usersDiv = document.createElement('div');
+
+			function renderList(users) {
+				usersDiv.innerText = "";
+				for (const user of users) {
+					let content = document.createElement('div');
+					content.innerText = JSON.stringify(user);
+					usersDiv.appendChild(content);
+				}
+				document.body.appendChild(usersDiv);
+			}
+
+			renderList(users); // 11
+
+
+			document.xxx1.state.onclick = function () {
+				if (this.checked) {
+					renderList(users.filter(value => value.status));
+				} else {
+					renderList(users.filter(value => !value.status));
+				}
+			};
+
+
+
+
+        </script>
+    </body>
+</html>

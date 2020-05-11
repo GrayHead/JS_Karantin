@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BOM</title>
+
+        <style>
+            #map {
+                width: 400px;
+                height: 400px;
+                background: silver;
+            }
+
+            #videoBlock {
+                width: 200px;
+                height: 200px;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <video id="videoBlock"></video>
+
+        <form name="f1">
+            <input type="text" value="" placeholder="name" name="name">
+            <br>
+            <input type="number" value="" placeholder="age" name="age">
+            <br>
+            <label>
+                status
+                <input type="checkbox" name="status">
+
+            </label>
+
+        </form>
+        <button id="btn">save user</button>
+
+
+        <div id="map"></div>
+
+
+
+        <script>
+			// window.alert('asjdfhgfasd')
+			// console.log();
+			/*window.localStorage*/
+			// localStorage.setItem('name','vasya');
+			// localStorage.clear();
+
+			// localStorage.setItem('user1', {name: 'vasya'});//
+			//
+			// localStorage.setItem('user1', JSON.stringify({name: 'vasya'}));
+
+			// let responseFromLS = localStorage.getItem('user1');
+			// console.log(JSON.parse(responseFromLS));
+
+			// let users = [
+			// 	{name: 'vasya', age: 31, status: false},
+			// 	{name: 'petya', age: 30, status: true},
+			// 	{name: 'kolya', age: 29, status: true},
+			// 	{name: 'olya', age: 28, status: false},
+			// 	{name: 'max', age: 30, status: true},
+			// 	{name: 'anya', age: 31, status: false},
+			// 	{name: 'oleg', age: 28, status: false},
+			// 	{name: 'andrey', age: 29, status: true},
+			// 	{name: 'masha', age: 30, status: true},
+			// 	{name: 'olya', age: 31, status: false},
+			// 	{name: 'max', age: 31, status: true}
+			// ];
+			//
+			// localStorage.setItem('users', JSON.stringify(users));
+
+
+			// let values = JSON.parse(localStorage.getItem('users'));
+			//
+			// if (Array.isArray(values) && values.length) {
+			// 	console.log(values);
+			// 	values.push({name: 'koks', age: 123, status: false});
+			// 	localStorage.setItem('users', JSON.stringify(values));
+			//
+			// } else {
+			// 	console.log('users is ab...');
+			// }
+
+
+			// let btn = document.getElementById('btn');
+			// btn.addEventListener('click', (e) => {
+			// 	let f1 = document.forms.f1;
+			// 	console.log(f1.name.value);
+			// 	console.log(f1.age.value);
+			// 	console.log(f1.status.checked);
+			// 	let user = {
+			// 		name: f1.name.value,
+			// 		age: f1.age.value,
+			// 		status: f1.status.checked
+			// 	};
+			// 	console.log(user);
+			// 	let users = JSON.parse(localStorage.getItem('users')) || [];
+			// 	users.push(user);
+			// 	localStorage.setItem('users', JSON.stringify(users));
+			//
+			// });
+			// console.log(localStorage);
+			// console.log(localStorage.removeItem('users'));
+			//
+			// console.log(window.innerHeight);
+			// console.log(window.innerWidth);
+			// console.log(window.screen.width);
+			// console.log(window.screen.height);
+			//
+			//
+			// console.log(navigator.platform);
+			// console.log(navigator.languages);
+			// console.log(navigator.language);
+			// console.log(navigator.onLine);
+			// console.log(navigator.maxTouchPoints);
+			// console.log(navigator.hardwareConcurrency);
+			//
+			//
+			// navigator.getBattery().then(value => console.log(value));
+
+
+			function xxx() {
+				navigator.geolocation.getCurrentPosition(position => {
+					new google.maps.Map(document.getElementById('map'), {
+						center: {
+							lat: position.coords.latitude,
+							lng: position.coords.longitude
+						}, zoom: 8
+					});
+				});
+			}
+
+
+			// navigator.mediaDevices.getUserMedia({video: true}).then(videoStream => {
+			// 	let video = document.getElementById('videoBlock');
+			// 	video.srcObject = videoStream;
+			// 	video.play();
+			// }).catch(reason => console.log(reason));
+
+
+			console.log(location.host);
+			console.log(location.href);
+			// location.href = 'https://owu.com.ua';
+			// history.forward();
+			// history.back();
+
+
+        </script>
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=&callback=xxx"
+                async defer></script>
+
+    </body>
+</html>
