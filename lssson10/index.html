@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <!--        <button class="target" id="point">save</button>-->
+        <!--        <button class="target" id="point">save</button>-->
+
+
+        <div class="resolver">
+
+
+        </div>
+        <script>
+
+			// (function f($) {
+			// 	$
+			//
+			// }(jQuery));
+
+			// let $target = $('.target');
+			// // let $target = $('body #point');
+			// console.log($target);
+			//
+			// $target.each(function (index) {
+			// 	console.log(this);
+			// });
+
+
+			// for (let i = 0; i < 10; i++) {
+			// 	$('.resolver').append($('<h4/>', {text: 'ahgsfdhagsf', class: 'inner-block', xxx: 'yyy'}));
+			// }
+			//
+
+
+			let users = [
+				{id: 1, name: 'vasya', age: 31, status: false},
+				{id: 2, name: 'petya', age: 30, status: true},
+				{id: 3, name: 'kolya', age: 29, status: true},
+				{id: 4, name: 'olya', age: 28, status: false},
+				{id: 5, name: 'max', age: 30, status: true},
+				{id: 6, name: 'anya', age: 31, status: false},
+				{id: 7, name: 'oleg', age: 28, status: false},
+				{id: 8, name: 'andrey', age: 29, status: true},
+				{id: 9, name: 'masha', age: 30, status: true},
+				{id: 10, name: 'olya', age: 31, status: false},
+				{id: 11, name: 'max', age: 31, status: true},
+				{id: 12, name: 'max', age: 31, status: true},
+			];
+
+
+			$(users).each(function () {
+				$('.resolver').append($('<div/>', {
+					text: `${this.name} ${this.age} ${this.status}`,
+					id: `user-${this.id}`,
+					class: 'container'
+				}));
+			});
+
+
+			// tuple
+
+			let containers = $('.resolver > .container');
+			containers.filter(':even')
+					  .css({
+						  background: 'red',
+						  color: 'gold'
+					  })
+					  .height(100)
+				// .width(150)
+					  .animate({width: 300}, 1000, 'swing', function () {
+						  console.log('animation complete');
+					  })
+
+			;
+
+			let btn = $('<button/>', {text: 'close', style: 'background : black'});
+			btn.click(function () {
+				$(this)
+					.parent()
+					.fadeOut(1000);
+
+
+			});
+			containers.append(btn);
+
+
+			// 	// .css('background', 'silver')
+			// 	// .css('color' , 'gold')
+
+			// let containers = document.getElementsByClassName('container');
+			// for (let i = 0; i < users.length; i++) {
+			// 	if (i % 2 === 0) {
+			// 		containers[i].style.backgroundColor = 'red';
+			// 		containers[i].style.color = 'gold';
+			// 	}
+			// }
+
+
+			$('button').on('click', function () {
+
+			});
+
+
+
+        </script>
+
+    </body>
+</html>
